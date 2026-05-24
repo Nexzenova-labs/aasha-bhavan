@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverExternalPackages: ['razorpay', 'pdf-lib', 'nodemailer'],
+  experimental: {
+    serverComponentsExternalPackages: ['razorpay', 'pdf-lib', 'nodemailer'],
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: '*.supabase.co' },
